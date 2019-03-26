@@ -35,11 +35,11 @@ Ideally white curve static-images and videos should have been implemented using 
 
 Results for solid-white-curve:
 * Gaussian Blur and Canny Edge Detection
-![WI_SolidWhiteRight1](./Writeup_IV/WI_SolidWhiteCurve1.png)
+![WI_SolidWhiteCurve1](./Writeup_IV/WI_SolidWhiteCurve1.png)
 * Masking and P-Hough Transform
-![WI_SolidWhiteRight2](./Writeup_IV/WI_SolidWhiteRight2.png)
+![WI_SolidWhiteCurve2](./Writeup_IV/WI_SolidWhiteCurve2.png)
 * Final Output
-![WI_SolidWhiteRight3](./Writeup_IV/WI_SolidWhiteRight3.png)
+![WI_SolidWhiteCurve3](./Writeup_IV/WI_SolidWhiteCurve3.png)
 
 **Finding Lane Lines Inside a Video**
 
