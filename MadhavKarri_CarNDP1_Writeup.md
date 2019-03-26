@@ -23,7 +23,8 @@ The above set of steps were repeated on the following set of images
 
 Results for solid-white-right:
 
-Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files/solidWhiteRight-Copy1.ipynb) 
+Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files/solidWhiteRight-Copy1.ipynb)
+
 * Gaussian Blur and Canny Edge Detection
 ![WI_SolidWhiteRight1](./Writeup_IV/WI_SolidWhiteRight1.png)
 * Masking and P-Hough Transform
@@ -34,12 +35,28 @@ Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files
 Ideally white curve static-images and videos should have been implemented using color selection and region masking technique, which were introduced in the beginning of Term 1. Color selection/Region Masking likely would have been less computationally expensive compared to Gaussian Blur/Canny Edge Detection/Masking/P-Hough Transform. However, to retain consistency of python code and in lieu of time, implementation of lane detection on all static-images and videos have been performed using Gaussian Blur/Canny Edge Detection/Masking/P-Hough Transform.
 
 Results for solid-white-curve:
+
+Compared to solid-white-right, for the solid white curve the selection of masking area was modified.
+
+Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files/solidWhiteCurve-Copy1.ipynb)
+
 * Gaussian Blur and Canny Edge Detection
 ![WI_SolidWhiteCurve1](./Writeup_IV/WI_SolidWhiteCurve1.png)
 * Masking and P-Hough Transform
 ![WI_SolidWhiteCurve2](./Writeup_IV/WI_SolidWhiteCurve2.png)
 * Final Output
 ![WI_SolidWhiteCurve3](./Writeup_IV/WI_SolidWhiteCurve3.png)
+
+Results for solid-yellow-left:
+
+Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files/solidYellowLeft-Copy1.ipynb)
+
+* Gaussian Blur and Canny Edge Detection
+![WI_SolidYellowLeft1](./Writeup_IV/WI_SolidYellowLeft1.png)
+* Masking and P-Hough Transform
+![WI_SolidYellowLeft2](./Writeup_IV/WI_SolidYellowLeft2.png)
+* Final Output
+![WI_SolidYellowLeft3](./Writeup_IV/WI_SolidYellowLeft3.png)
 
 **Finding Lane Lines Inside a Video**
 
