@@ -13,15 +13,15 @@ Steps/process when working on Static Images/Frames
 * Followed by Masking and P-Hough Transform to extract lines and line-cordinates
 * For the last step caculate slopes for all the line-coordinates from the previous step. Use the change in sign of slope values to segregrate lines and line-cordinates for each of the left and right lanes
 
+![WI_SolidWhiteRight1](./Writeup_IV/WI_SolidWhiteRight1.png)
+
 **Finding Lane Lines Inside a Video**
 
 The goals / steps of this project are the following:
 * Make a pipeline that finds lane lines on the road
 * Reflect on your work in a written report
 
-[//]: # (Image References)
 
-[image1]: ./Writeup_IV/WI_SolidWhiteRight1.PNG "Grayscale"
 
 ---
 
@@ -35,7 +35,7 @@ In order to draw a single line on the left and right lanes, I modified the draw_
 
 If you'd like to include images to show how the pipeline works, here is how to include an image: 
 
-![alt text][image1]
+
 
 
 ### 2. Identify potential shortcomings with your current pipeline
