@@ -21,9 +21,21 @@ The above set of steps were repeated on the following set of images
 * solidYellowCurve2.jpg
 * whiteCarLaneSwitch.jpg
 
-Results for solid white curve:
+Results for solid-white-right:
+
+Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files/solidWhiteRight-Copy1.ipynb) 
 * Gaussian Blur and Canny Edge Detection
 ![WI_SolidWhiteRight1](./Writeup_IV/WI_SolidWhiteRight1.png)
+* Masking and P-Hough Transform
+![WI_SolidWhiteRight2](./Writeup_IV/WI_SolidWhiteRight2.png)
+* Final Output
+![WI_SolidWhiteRight3](./Writeup_IV/WI_SolidWhiteRight3.png)
+
+Ideally white curve static-images and videos should have been implemented using color selection and region masking technique, which were introduced in the beginning of Term 1. Color selection/Region Masking likely would have been less computationally expensive compared to Gaussian Blur/Canny Edge Detection/Masking/P-Hough Transform. However, to retain consistency of python code and in lieu of time, implementation of lane detection on all static-images and videos have been performed using Gaussian Blur/Canny Edge Detection/Masking/P-Hough Transform.
+
+Results for solid-white-curve:
+* Gaussian Blur and Canny Edge Detection
+![WI_SolidWhiteRight1](./Writeup_IV/WI_SolidWhiteCurve1.png)
 * Masking and P-Hough Transform
 ![WI_SolidWhiteRight2](./Writeup_IV/WI_SolidWhiteRight2.png)
 * Final Output
