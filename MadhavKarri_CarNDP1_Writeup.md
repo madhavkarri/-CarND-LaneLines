@@ -13,7 +13,21 @@ Steps/process when working on Static Images/Frames
 * Followed by Masking and P-Hough Transform to extract lines and line-cordinates
 * For the last step caculate slopes for all the line-coordinates from the previous step. Use the change in sign of slope values to segregrate lines and line-cordinates for each of the left and right lanes
 
+The above set of steps were repeated on the following set of images
+* solidWhiteRight.jpg
+* solidWhiteCurve.jpg
+* solidYellowLeft.jpg
+* solidYellowCurve.jpg
+* solidYellowCurve2.jpg
+* whiteCarLaneSwitch.jpg
+
+Results for solid white curve:
+* Gaussian Blur and Canny Edge Detection
 ![WI_SolidWhiteRight1](./Writeup_IV/WI_SolidWhiteRight1.png)
+* Masking and P-Hough Transform
+![WI_SolidWhiteRight2](./Writeup_IV/WI_SolidWhiteRight2.png)
+* Final Output
+![WI_SolidWhiteRight3](./Writeup_IV/WI_SolidWhiteRight3.png)
 
 **Finding Lane Lines Inside a Video**
 
