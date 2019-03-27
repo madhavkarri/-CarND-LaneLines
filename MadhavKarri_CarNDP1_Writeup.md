@@ -79,15 +79,15 @@ Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files
 - Final Output (Extrapolation/Patching left and right lanes to be equal at top end of the image)
 
 - Technique 1: 
-  - Determine visually the line that has the minimum y (in this case right lane). Use this minimum-y and "m" and "b" parameters of the left lane to extend/patch to be equal to the right lane.
+  - Determine visually the line that has the minimum y (in this case right lane). Use this minimum-y and "m" and "b" parameters of the left lane to extend/patch to be equal to the right lane
 
 ![WI_SolidYellowCurve3](./Writeup_IV/WI_SolidYellowCurve4.png)
 
 - Technique 2: 
-  - Determine x-difference as a function of y. 
-  - Determine visually the line that has the minimum-y (in this case right lane). Use this minimum-y to determine x-difference. 
-  - Add this x-difference to the x-(right lane) at minimum-y to determine x of left lane. 
-  - This will extend/patch left lane to be equal to the right lane.
+  - Determine x-difference as a function of y
+  - Determine visually the line that has the minimum-y (in this case right lane). Use this minimum-y to determine x-difference
+  - Add this x-difference to the x-(right lane) at minimum-y to determine x of left lane.
+  - This will extend/patch left lane to be equal to the right lane
 
 ![WI_SolidYellowCurve3](./Writeup_IV/WI_SolidYellowCurve5.png)
 
@@ -104,16 +104,36 @@ Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files
 
 - Final Output (Extrapolation/Patching left and right lanes to be equal at top end of the image)
 - Technique: 
-  - Instead of using average "m" and "b" parameters for each of the left and right lanes. Localized "m" and "b" parameters are evaluated based on the extraction of lines and line-cordinates from Masking and P-Hough Transform.
-  - Localized "m" and "b" parameters are evaluated in increments of 5 points in y-direction starting from bottom of the image (y=540) for each of the left and right lanes.
-  - Unlike the previous extrapolation and patching techniques, this technique does not need visual inspection to determine the existence of minimum-y on left or right lanes. Instead the y-cordinates from all of the left and right lanes are pooled and the global minimum-y is determined.
+  - Instead of using average "m" and "b" parameters for each of the left and right lanes. Localized "m" and "b" parameters are evaluated based on the extraction of lines and line-cordinates from Masking and P-Hough Transform
+  - Localized "m" and "b" parameters are evaluated in increments of 5 points in y-direction starting from bottom of the image (y=540) for each of the left and right lanes
+  - Unlike the previous extrapolation and patching techniques, this technique does not need visual inspection to determine the existence of minimum-y on left or right lanes. Instead the y-cordinates from all of the left and right lanes are pooled and the global minimum-y is determined
   - A cobination of localized "m" and "b" parameters and the global minimum-y are used to draw a locus of continuous line segments for each of the left and right lanes
 
 ![WI_SolidYellowCurve3](./Writeup_IV/WI_SolidYellowCurve4.png)
 
-**Finding Lane Lines Inside a Video**
+**Finding Lane Lines in a Video**
 
+- Following are the pipeline/steps implemented for finding lane lines in a video
+  - Implemented a python code to extract raw fraemes/static images from a video file
+![WI_SolidWhiteRightV1](./Writeup_IV/WI_SolidWhiteRightV1.png)
 
+  - Implemented a pipeline consisting primarily of 1 main function and 3 call-back function definitions:
+    - Function1: "my_ced" that implements Canny Edge Detection 
+      - Input: ".jpg" image file
+      - Output: edges from the Canny Edge Detection algorithm
+    - Function2: "my_mpht" that implements Masking and P-Hough Transform to get line and line-coordinates.
+      - Input: ".jpg" image file, masking coordiantes, and edges output from ("my_ced") Canny Edge Detection algorithm
+      - Output: co-ordinates for all the lines detected by P-Hough Transform and consequently "m-slope" and "b-intercept" parameters
+    - Function3: "my_fld" that implements drawing final lines and adding transperency
+      - Input: ".jpg" image file and co-ordinates of all the lines detected by P-Hough Transform
+      - Output: Original raw image/frame overlayed with detected/predicted lane lines
+      - Extras: In addition this function also adds trasparency and saves the final output as a ".jpg file"
+    - Main Function/Wrapper: A while loop that calls Functions 1, 2, 3 repeatedly on each of the image frames extracted from the original video.
+
+  - Implemented a python code to stich final output frames from the preceeding steps and convert it into a video
+![WI_SolidWhiteRightV2](./Writeup_IV/WI_SolidWhiteRightV2.png)
+      
+      
 ---
 
 ### Reflection
