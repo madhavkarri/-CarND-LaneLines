@@ -31,7 +31,7 @@ The above set of steps were repeated on the following set of images
 
 Results for solid-white-right:
 
-Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files/solidWhiteRight-Copy1.ipynb)
+Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidWhiteRight-Copy1.ipynb)
 
 * Gaussian Blur and Canny Edge Detection
 ![WI_SolidWhiteRight1](./Writeup_IV/WI_SolidWhiteRight1.png)
@@ -46,7 +46,7 @@ Results for solid-white-curve:
 
 Compared to solid-white-right, for the solid white curve the selection of masking area was modified.
 
-Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files/solidWhiteCurve-Copy1.ipynb)
+Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidWhiteCurve-Copy1.ipynb)
 
 * Gaussian Blur and Canny Edge Detection
 ![WI_SolidWhiteCurve1](./Writeup_IV/WI_SolidWhiteCurve1.png)
@@ -57,7 +57,7 @@ Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files
 
 Results for solid-yellow-left:
 
-Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files/solidYellowLeft-Copy1.ipynb)
+Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidYellowLeft-Copy1.ipynb)
 
 * Gaussian Blur and Canny Edge Detection
 ![WI_SolidYellowLeft1](./Writeup_IV/WI_SolidYellowLeft1.png)
@@ -68,7 +68,7 @@ Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files
 
 Results for solid-yellow-curve:
 
-Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files/solidYellowCurve-Copy1.ipynb)
+Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidYellowCurve-Copy1.ipynb)
 
 * Gaussian Blur and Canny Edge Detection
 ![WI_SolidYellowCurve1](./Writeup_IV/WI_SolidYellowCurve1.png)
@@ -93,7 +93,7 @@ Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files
 
 Results for solid-yellow-curve2:
 
-Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files/solidYellowCurve2-Copy1.ipynb)
+Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidYellowCurve2-Copy1.ipynb)
 
 * Gaussian Blur and Canny Edge Detection
 ![WI_SolidYellowCurve21](./Writeup_IV/WI_SolidYellowCurve21.png)
@@ -109,7 +109,7 @@ Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files
   - Unlike the previous extrapolation and patching techniques, this technique does not need visual inspection to determine the existence of minimum-y on left or right lanes. Instead the y-cordinates from all of the left and right lanes are pooled and the global minimum-y is determined
   - A cobination of localized "m" and "b" parameters and the global minimum-y are used to draw a locus of continuous line segments for each of the left and right lanes
 
-![WI_SolidYellowCurve3](./Writeup_IV/WI_SolidYellowCurve4.png)
+![WI_SolidYellowCurve24](./Writeup_IV/WI_SolidYellowCurve24.png)
 
 **Finding Lane Lines in a Video**
 
@@ -132,7 +132,17 @@ Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files
 
   - Implemented a python code to stich final output frames from the preceeding steps and convert it into a video
 ![WI_SolidWhiteRightV2](./Writeup_IV/WI_SolidWhiteRightV2.png)
-      
+
+**Final Video Output**
+
+ - Solid White Right
+   - Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/Porject1Video-SolidWhiteRight/solidWhiteRight-mp4.ipynb)
+   - Video Output File: [Link](./Writeup_IV/solidWhiteRight_fo.mp4)
+
+  - Solid Yellow Left
+    - Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/Porject1Video-SolidWhiteRight/solidYellowLeft-mp4.ipynb)
+    - Video Output File: [Link](./Writeup_IV/solidYellowLeft_fo.mp4) 
+  
       
 ---
 
