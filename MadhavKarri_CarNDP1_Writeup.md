@@ -142,33 +142,20 @@ Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidYellowCurve
   - Solid Yellow Left
     - Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/Porject1Video-SolidWhiteRight/solidYellowLeft-mp4.ipynb)
     - Video Output File: [Link](./Writeup_IV/solidYellowLeft_fo.mp4) 
-  
       
 ---
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+### 2. Potential shortcomings with the current pipeline
+- A lot of manual processing is involved with the exisiting pipeline.
+  - Manual picking of masking co-ordinates
+  - Fine tuning parameters for each of the Gaussian Blur/Canny Edge Detection/Masking/P-Hough Transform steps, specifically on each individual frames
+  - Spurious or unwanted slopes, when segregating slopes to detect line segments associated with each of the left and right lanes
 
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
-
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-
-
-
-### 2. Identify potential shortcomings with your current pipeline
-
-
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
-
-
-### 3. Suggest possible improvements to your pipeline
-
-A possible improvement would be to ...
-
-Another potential improvement could be to ...
+### 3. Possible improvements to pipeline
+- Research/Implement detection of arc/curvature line segments available in opencv
+- Automate the process either through Machine Learning/AI for the following set of tasks
+  - To pick optimal co-ordinates for masking
+  - To reject spurious or unwanted slopes during slope segregation to identiyf left and right lanes
+- Using mapping and localization explore possibility to detect and utilize priori information on lane coordinates and curvature
