@@ -159,3 +159,8 @@ Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidYellowCurve
   - To pick optimal co-ordinates for masking
   - To reject spurious or unwanted slopes during slope segregation to identiyf left and right lanes
 - Using mapping and localization explore possibility to detect and utilize priori information on lane coordinates and curvature
+- Currently in the videos the lane detection lines are bumpy. The bumpiness can be minimized by adding weights during averaging of slopes. 
+
+### Optional Challange
+- Code that produced SolidYellowLeft.mp4 was attempted to detect lane lines. Although, it performed well on a good number of frame, it had issues detecting lane lines over the bridge with shade.
+-  started tinkering with the 
