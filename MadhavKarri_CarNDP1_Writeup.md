@@ -147,13 +147,13 @@ Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidYellowCurve
 
 ### Reflection
 
-### 2. Potential shortcomings with the current pipeline
+### Potential shortcomings with the current pipeline
 - A lot of manual processing is involved with the exisiting pipeline.
   - Manual picking of masking co-ordinates
   - Fine tuning parameters for each of the Gaussian Blur/Canny Edge Detection/Masking/P-Hough Transform steps, specifically on each individual frames
   - Spurious or unwanted slopes, when segregating slopes to detect line segments associated with each of the left and right lanes
 
-### 3. Possible improvements to pipeline
+### Possible improvements to pipeline
 - Research/Implement detection of arc/curvature line segments available in opencv
 - Automate the process either through Machine Learning/AI for the following set of tasks
   - To pick optimal co-ordinates for masking
