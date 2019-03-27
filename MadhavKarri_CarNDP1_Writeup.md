@@ -3,6 +3,10 @@
 
 ## Madhav Karri
 
+The goals/steps for this project are:
+* Make a pipeline that finds lane lines on the road
+* Reflect on your work in a written report
+
 ---
 
 **Finding Lane Lines on Static Images/Frames**
@@ -103,16 +107,11 @@ Python Code/Implementation: [Link](CarND-LaneLines-P1/MadhavKarri-Project1-Files
   - Instead of using average "m" and "b" parameters for each of the left and right lanes. Localized "m" and "b" parameters are evaluated based on the extraction of lines and line-cordinates from Masking and P-Hough Transform.
   - Localized "m" and "b" parameters are evaluated in increments of 5 points in y-direction starting from bottom of the image (y=540) for each of the left and right lanes.
   - Unlike the previous extrapolation and patching techniques, this technique does not need visual inspection to determine the existence of minimum-y on left or right lanes. Instead the y-cordinates from all of the left and right lanes are pooled and the global minimum-y is determined.
-  - A cobination of localized "m" and "b" parameters and the global minimum-y are used to draw a locus of continuous line segments
+  - A cobination of localized "m" and "b" parameters and the global minimum-y are used to draw a locus of continuous line segments for each of the left and right lanes
 
 ![WI_SolidYellowCurve3](./Writeup_IV/WI_SolidYellowCurve4.png)
 
 **Finding Lane Lines Inside a Video**
-
-The goals / steps of this project are the following:
-* Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
-
 
 
 ---
