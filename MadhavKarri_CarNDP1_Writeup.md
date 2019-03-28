@@ -162,5 +162,8 @@ Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidYellowCurve
 - Currently in the videos the lane detection lines are bumpy. The bumpiness can be minimized by adding weights during averaging of slopes. 
 
 ### Optional Challange
-- Code that produced SolidYellowLeft.mp4 was attempted to detect lane lines. Although, it performed well on a good number of frame, it had issues detecting lane lines over the bridge with shade.
--  started tinkering with the 
+- Code that produced SolidYellowLeft.mp4 was attempted to detect lane lines. Although, it performed well on a good number of frames, it had issues detecting lane lines over the bridge.
+- Tried modifying different parameters and found out converting the original raw image/frame using color space conversion code to hsv within cv2.cvtcolor resulted in optimal detection of the yellow and white lanes through all the frames in the video
+- Solid Yellow Left
+  - Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/Porject1Video-Challenge/Challenge-mp4.ipynb)
+  - Video Output File: [Link](./Writeup_IV/Challenge_fo.mp4)
