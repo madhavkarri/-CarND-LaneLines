@@ -1,7 +1,7 @@
 # **Self-Driving Car Engineer Nanodegree**
 # **Project1: Finding Lane Lines on the Road**
 
-## Madhav Karri
+## MK
 
 The goals/steps for this project are:
 * Make a pipeline that finds lane lines on the road
