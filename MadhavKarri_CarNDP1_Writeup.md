@@ -3,8 +3,8 @@
 
 ## MK
 
-Overview
----
+**Overview
+
 Detect highway lane lines in images using Python and OpenCV, a package that has many useful tools for analyzing images.
 
 The goals/steps for this project are:
