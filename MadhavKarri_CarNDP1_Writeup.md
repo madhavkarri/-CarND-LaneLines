@@ -12,14 +12,14 @@ The goals/steps for this project: build a pipeline that finds lane lines on the 
 **Finding Lane Lines on Static Images/Frames**
 
 Steps/process when working on Static Images/Frames
-* Load all neccessary python imports
+* Load all necessary python imports
 * Implement Gaussian Blur and Canny Edge Detection. For a single static image/frame fine tune parameters such as kernel size, low threshold and high threshold
 * Followed by Masking and P-Hough Transform to extract lines and line-coordinates
-* Calculate slopes for all line-coordinates from the previous step. Use the change in sign of slope values to segregrate lines and line-coordinates for each of the left and right lanes.
+* Calculate slopes for all line-coordinates from the previous step. Use the change in sign of slope values to segregate lines and line-coordinates for each of the left and right lanes.
 * To draw lines 
   - Slope (parameter m) and intercept (parameter b) in "y=mx+b" for each of the left and right lane lines were determined
-  - The maximum y-coordinate for all images (bottom) was determined to be 540 (from image size). Using this y-coordinate, x-cordiante for each of the left and right lanes were determined using "m" and "b" parameters
-  - Determine minimum y coordinates at top edge of the masking region: minimum y-coordinate from all the detected line-cordinates from P-Hough Transform for each of the left and right lanes were extracted. Corresponding x-coordiantes were determined using "m" and "b" parameters
+  - The maximum y-coordinate for all images (bottom) was determined to be 540 (from image size). Using this y-coordinate, x-coordinate for each of the left and right lanes were determined using "m" and "b" parameters
+  - Determine minimum y coordinates at top edge of the masking region: minimum y-coordinate from all the detected line-coordinates from P-Hough Transform for each of the left and right lanes were extracted. Corresponding x-coordinates were determined using "m" and "b" parameters
 
 The above set of steps were repeated on the following set of images
 * solidWhiteRight.jpg
@@ -44,7 +44,7 @@ Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidWhiteCurve-
 **Finding Lane Lines in a Video**
 
 - Following are the pipeline/steps implemented for finding lane lines in a video
-  - Implemented a python code to extract raw fraemes/static images from a video file
+  - Implemented a python code to extract raw frames/static images from a video file
 ![WI_SolidWhiteRightV1](./Writeup_IV/WI_SolidWhiteRightV1.png)
 
   - Implemented a pipeline consisting primarily of 1 main function and 3 call-back function definitions:
@@ -52,7 +52,7 @@ Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidWhiteCurve-
       - Input: ".jpg" image file
       - Output: edges from the Canny Edge Detection algorithm
     - Function2: "my_mpht" that implements Masking and P-Hough Transform to get line and line-coordinates.
-      - Input: ".jpg" image file, masking coordiantes, and edges output from ("my_ced") Canny Edge Detection algorithm
+      - Input: ".jpg" image file, masking coordinates, and edges output from ("my_ced") Canny Edge Detection algorithm
       - Output: co-ordinates for all the lines detected by P-Hough Transform and consequently "m-slope" and "b-intercept" parameters
     - Function3: "my_fld" that implements drawing final lines and adding transperency
       - Input: ".jpg" image file and co-ordinates of all the lines detected by P-Hough Transform
