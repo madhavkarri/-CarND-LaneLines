@@ -29,22 +29,8 @@ The above set of steps were repeated on the following set of images
 * solidYellowCurve2.jpg
 * whiteCarLaneSwitch.jpg
 
-Results for solid-white-right:
-
-Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidWhiteRight-Copy1.ipynb)
-
-* Gaussian Blur and Canny Edge Detection
-![WI_SolidWhiteRight1](./Writeup_IV/WI_SolidWhiteRight1.png)
-* Masking and P-Hough Transform
-![WI_SolidWhiteRight2](./Writeup_IV/WI_SolidWhiteRight2.png)
-* Final Output
-![WI_SolidWhiteRight3](./Writeup_IV/WI_SolidWhiteRight3.png)
-
-Ideally white curve static-images and videos should have been implemented using color selection and region masking technique, which were introduced in the beginning of Term 1. Color selection/Region Masking likely would have been less computationally expensive compared to Gaussian Blur/Canny Edge Detection/Masking/P-Hough Transform. However, to retain consistency of python code and in lieu of time, implementation of lane detection on all static-images and videos have been performed using Gaussian Blur/Canny Edge Detection/Masking/P-Hough Transform.
 
 Results for solid-white-curve:
-
-Compared to solid-white-right, for the solid white curve the selection of masking area was modified.
 
 Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidWhiteCurve-Copy1.ipynb)
 
@@ -54,62 +40,6 @@ Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidWhiteCurve-
 ![WI_SolidWhiteCurve2](./Writeup_IV/WI_SolidWhiteCurve2.png)
 * Final Output
 ![WI_SolidWhiteCurve3](./Writeup_IV/WI_SolidWhiteCurve3.png)
-
-Results for solid-yellow-left:
-
-Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidYellowLeft-Copy1.ipynb)
-
-* Gaussian Blur and Canny Edge Detection
-![WI_SolidYellowLeft1](./Writeup_IV/WI_SolidYellowLeft1.png)
-* Masking and P-Hough Transform
-![WI_SolidYellowLeft2](./Writeup_IV/WI_SolidYellowLeft2.png)
-* Final Output
-![WI_SolidYellowLeft3](./Writeup_IV/WI_SolidYellowLeft3.png)
-
-Results for solid-yellow-curve:
-
-Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidYellowCurve-Copy1.ipynb)
-
-* Gaussian Blur and Canny Edge Detection
-![WI_SolidYellowCurve1](./Writeup_IV/WI_SolidYellowCurve1.png)
-* Masking and P-Hough Transform
-![WI_SolidYellowCurve2](./Writeup_IV/WI_SolidYellowCurve2.png)
-* Final Output
-![WI_SolidYellowCurve3](./Writeup_IV/WI_SolidYellowCurve3.png)
-- Final Output (Extrapolation/Patching left and right lanes to be equal at top end of the image)
-
-- Technique 1: 
-  - Determine visually the line that has the minimum y (in this case right lane). Use this minimum-y and "m" and "b" parameters of the left lane to extend/patch to be equal to the right lane
-
-![WI_SolidYellowCurve3](./Writeup_IV/WI_SolidYellowCurve4.png)
-
-- Technique 2: 
-  - Determine x-difference as a function of y
-  - Determine visually the line that has the minimum-y (in this case right lane). Use this minimum-y to determine x-difference
-  - Add this x-difference to the x-(right lane) at minimum-y to determine x of left lane.
-  - This will extend/patch left lane to be equal to the right lane
-
-![WI_SolidYellowCurve3](./Writeup_IV/WI_SolidYellowCurve5.png)
-
-Results for solid-yellow-curve2:
-
-Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidYellowCurve2-Copy1.ipynb)
-
-* Gaussian Blur and Canny Edge Detection
-![WI_SolidYellowCurve21](./Writeup_IV/WI_SolidYellowCurve21.png)
-* Masking and P-Hough Transform
-![WI_SolidYellowCurve22](./Writeup_IV/WI_SolidYellowCurve22.png)
-* Final Output
-![WI_SolidYellowCurve23](./Writeup_IV/WI_SolidYellowCurve23.png)
-
-- Final Output (Extrapolation/Patching left and right lanes to be equal at top end of the image)
-- Technique: 
-  - Instead of using average "m" and "b" parameters for each of the left and right lanes. Localized "m" and "b" parameters are evaluated based on the extraction of lines and line-cordinates from Masking and P-Hough Transform
-  - Localized "m" and "b" parameters are evaluated in increments of 5 points in y-direction starting from bottom of the image (y=540) for each of the left and right lanes
-  - Unlike the previous extrapolation and patching techniques, this technique does not need visual inspection to determine the existence of minimum-y on left or right lanes. Instead the y-cordinates from all of the left and right lanes are pooled and the global minimum-y is determined
-  - A cobination of localized "m" and "b" parameters and the global minimum-y are used to draw a locus of continuous line segments for each of the left and right lanes
-
-![WI_SolidYellowCurve24](./Writeup_IV/WI_SolidYellowCurve24.png)
 
 **Finding Lane Lines in a Video**
 
