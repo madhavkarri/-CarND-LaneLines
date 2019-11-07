@@ -22,12 +22,7 @@ Steps/process when working on Static Images/Frames
   - Determine minimum y coordinates at top edge of the masking region: minimum y-coordinate from all the detected line-coordinates from P-Hough Transform for each of the left and right lanes were extracted. Corresponding x-coordinates were determined using "m" and "b" parameters
 
 The above set of steps were repeated on the following set of images
-* solidWhiteRight.jpg
-* solidWhiteCurve.jpg
-* solidYellowLeft.jpg
-* solidYellowCurve.jpg
-* solidYellowCurve2.jpg
-* whiteCarLaneSwitch.jpg
+![WI_TestImage](./Writeup_IV/TestImages.png)
 
 
 Results for solid-white-curve:
