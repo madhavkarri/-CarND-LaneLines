@@ -14,12 +14,12 @@ The goals/steps for this project: build a pipeline that finds lane lines on the 
 Steps/process when working on Static Images/Frames
 * Load all neccessary python imports
 * Implement Gaussian Blur and Canny Edge Detection. For a single static image/frame fine tune parameters such as kernel size, low threshold and high threshold
-* Followed by Masking and P-Hough Transform to extract lines and line-cordinates
-* Calculate slopes for all line-coordinates from the previous step. Use the change in sign of slope values to segregrate lines and line-cordinates for each of the left and right lanes.
+* Followed by Masking and P-Hough Transform to extract lines and line-coordinates
+* Calculate slopes for all line-coordinates from the previous step. Use the change in sign of slope values to segregrate lines and line-coordinates for each of the left and right lanes.
 * To draw lines 
   - Slope (parameter m) and intercept (parameter b) in "y=mx+b" for each of the left and right lane lines were determined
-  - The maximum y co-ordinate for all images (bottom) was determined to be 540 (from image size). Using this y-cordinate x-cordiantes for each of the left and right lanes were determined using "m" and "b" parameters
-  - For minimum y co-ordinates (region of interest towards top of the image or near the top edge of the masking region) minimum from all the detected line-cordinates from P-Hough Transform for each of the left and right lanes were extracted. The x-cordiantes were determined using average "m" and "b" parameters.
+  - The maximum y-coordinate for all images (bottom) was determined to be 540 (from image size). Using this y-coordinate, x-cordiante for each of the left and right lanes were determined using "m" and "b" parameters
+  - Determine minimum y coordinates at top edge of the masking region: minimum y-coordinate from all the detected line-cordinates from P-Hough Transform for each of the left and right lanes were extracted. Corresponding x-coordiantes were determined using "m" and "b" parameters
 
 The above set of steps were repeated on the following set of images
 * solidWhiteRight.jpg
