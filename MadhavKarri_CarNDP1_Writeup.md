@@ -7,9 +7,7 @@
 
 Detect highway lane lines in images using Python and OpenCV, a package that has many useful tools for analyzing images.
 
-The goals/steps for this project are:
-* Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
+The goals/steps for this project: build a pipeline that finds lane lines on the road
 
 **Finding Lane Lines on Static Images/Frames**
 
