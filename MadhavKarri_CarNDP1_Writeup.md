@@ -42,7 +42,7 @@ Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidWhiteCurve-
   - Implemented a python code to extract raw frames/static images from a video file
 ![WI_SolidWhiteRightV1](./Writeup_IV/WI_SolidWhiteRightV1.png)
 
-  - Implemented a pipeline consisting primarily of 1 main function and 3 call-back function definitions:
+  - Implemented a pipeline consisting primarily of 1 main function and 3 call-back functions:
     - Function1: "my_ced" that implements Canny Edge Detection 
       - Input: ".jpg" image file
       - Output: edges from the Canny Edge Detection algorithm
