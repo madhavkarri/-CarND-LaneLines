@@ -38,7 +38,7 @@ Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidWhiteCurve-
 
 **Finding Lane Lines in a Video**
 
-- Following are the pipeline/steps implemented for finding lane lines in a video
+- Below pipeline implemented for finding lane lines in a video:
   - Implemented a python code to extract raw frames/static images from a video file
 ![WI_SolidWhiteRightV1](./Writeup_IV/WI_SolidWhiteRightV1.png)
 
