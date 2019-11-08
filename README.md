@@ -28,7 +28,7 @@ The above set of steps were repeated on the following set of test images
 
 Results for solid-white-curve:
 
-Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidWhiteCurve.ipynb)
+Python Code/Implementation: [Link](./P1_Files/solidWhiteCurve.ipynb)
 
 * Gaussian Blur and Canny Edge Detection
 ![WI_SolidWhiteCurve1](./Writeup_IV/WI_SolidWhiteCurve1.png)
@@ -115,11 +115,11 @@ vid_out.release()
 **Final Video Output**
 
  - Solid White Right
-   - Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/Porject1Video-SolidWhiteRight/solidWhiteRight-mp4.ipynb)
+   - Python Code/Implementation: [Link](./P1_Files/Porject1Video-SolidWhiteRight/solidWhiteRight-mp4.ipynb)
    - Video Output File: [Link](https://www.youtube.com/watch?v=zpytp78WS78&feature=youtu.be)
 
   - Solid Yellow Left
-    - Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/Project1Video-SolidYellowLeft/solidYellowLeft-mp4.ipynb)
+    - Python Code/Implementation: [Link](./P1_Files/Project1Video-SolidYellowLeft/solidYellowLeft-mp4.ipynb)
     - Video Output File: [Link](https://youtu.be/WyAfo_056Jw) 
       
 ---
@@ -143,5 +143,5 @@ vid_out.release()
 ### Optional Challenge
 - Tried modifying different parameters and found out converting the original raw image/frame using color space conversion code to hsv within cv2.cvtcolor resulted in optimal detection of the yellow and white lanes through all the frames in the video
 - Challenge
-  - Python Code/Implementation: [Link](/MadhavKarri-Project1-Files/Project1Video-Challenge/Challenge-mp4.ipynb)
+  - Python Code/Implementation: [Link](/P1-Files/Project1Video-Challenge/Challenge-mp4.ipynb)
   - Video Output File: [Link](https://www.youtube.com/watch?v=ql4EMbBfreA&feature=youtu.be)
