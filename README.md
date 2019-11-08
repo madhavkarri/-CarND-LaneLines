@@ -137,7 +137,7 @@ vid_out.release()
 - Research/Implement detection of arc/curvature line segments available in opencv
 - Automate the process either through Machine Learning/AI for the following set of tasks
   - To pick optimal co-ordinates for masking
-  - To reject spurious or unwanted slopes during slope segregation to identiyf left and right lanes
+  - To reject spurious or unwanted slopes during slope segregation
 - Using mapping and localization explore possibility to detect and utilize priori information on lane coordinates and curvature 
 
 ### Optional Challange
