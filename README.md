@@ -28,7 +28,7 @@ The above set of steps were repeated on the following set of test images
 
 Results for solid-white-curve:
 
-Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidWhiteCurve-Copy1.ipynb)
+Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidWhiteCurve.ipynb)
 
 * Gaussian Blur and Canny Edge Detection
 ![WI_SolidWhiteCurve1](./Writeup_IV/WI_SolidWhiteCurve1.png)
@@ -41,7 +41,32 @@ Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/solidWhiteCurve-
 
 - Below pipeline implemented for finding lane lines in a video:
   - Implemented a python code to extract raw frames/static images from a video file
-![WI_SolidWhiteRightV1](./Writeup_IV/WI_SolidWhiteRightV1.png)
+  
+```python
+
+# CAPTURE/EXTRACT STATIC FRAMES FROM VIDEO
+
+#doing all the relevant imports
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+import numpy as np
+import cv2
+import itertools as it
+
+from collections import deque
+
+print(cv2.__version__)
+vidcap = cv2.VideoCapture('solidWhiteRight-Copy1.mp4')
+success,image = vidcap.read()
+count = 0
+success = True
+while success:
+  cv2.imwrite("swr_frame%d.jpg" % count, image)     # save frame as JPEG file
+  success,image = vidcap.read()
+  print('Read a new frame: ', success)
+  count += 1
+
+```
 
   - Implemented a pipeline consisting primarily of 1 main function and 3 call-back functions:
     - Function1: "my_ced" that implements Canny Edge Detection 
