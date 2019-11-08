@@ -129,7 +129,8 @@ vid_out.release()
 ### Potential shortcomings with the current pipeline
 - A lot of manual processing is involved with the exisiting pipeline.
   - Manual picking of masking co-ordinates
-  - Fine tuning parameters for each of the Gaussian Blur/Canny Edge Detection/Masking/P-Hough Transform steps, specifically on each individual frames
+  - Fine tuning parameters for each of the Gaussian Blur/Canny Edge Detection/Masking/P-Hough Transform steps
+  - Only detects straight lane lines. To handle curved lanes (or lane curvature), need to implement perspective transformation and poly fitting rather than linear fitting
   - Spurious or unwanted slopes, when segregating slopes to detect line segments associated with each of the left and right lanes
 
 ### Possible improvements to pipeline
@@ -137,11 +138,9 @@ vid_out.release()
 - Automate the process either through Machine Learning/AI for the following set of tasks
   - To pick optimal co-ordinates for masking
   - To reject spurious or unwanted slopes during slope segregation to identiyf left and right lanes
-- Using mapping and localization explore possibility to detect and utilize priori information on lane coordinates and curvature
-- Currently in the videos the lane detection lines are bumpy. The bumpiness can be minimized by adding weights during averaging of slopes. 
+- Using mapping and localization explore possibility to detect and utilize priori information on lane coordinates and curvature 
 
 ### Optional Challange
-- Code that produced SolidYellowLeft.mp4 was attempted to detect lane lines. Although, it performed well on a good number of frames, it had issues detecting lane lines over the bridge.
 - Tried modifying different parameters and found out converting the original raw image/frame using color space conversion code to hsv within cv2.cvtcolor resulted in optimal detection of the yellow and white lanes through all the frames in the video
 - Solid Yellow Left
   - Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/Porject1Video-Challenge/Challenge-mp4.ipynb)
