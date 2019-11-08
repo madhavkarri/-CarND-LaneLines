@@ -116,11 +116,11 @@ vid_out.release()
 
  - Solid White Right
    - Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/Porject1Video-SolidWhiteRight/solidWhiteRight-mp4.ipynb)
-   - Video Output File: [Link](./Writeup_IV/solidWhiteRight_fo.mp4)
+   - Video Output File: [Link](https://www.youtube.com/watch?v=zpytp78WS78&feature=youtu.be)
 
   - Solid Yellow Left
     - Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/Project1Video-SolidYellowLeft/solidYellowLeft-mp4.ipynb)
-    - Video Output File: [Link](./Writeup_IV/solidYellowLeft_fo.mp4) 
+    - Video Output File: [Link](https://youtu.be/WyAfo_056Jw) 
       
 ---
 
@@ -144,4 +144,4 @@ vid_out.release()
 - Tried modifying different parameters and found out converting the original raw image/frame using color space conversion code to hsv within cv2.cvtcolor resulted in optimal detection of the yellow and white lanes through all the frames in the video
 - Challenge
   - Python Code/Implementation: [Link](/MadhavKarri-Project1-Files/Project1Video-Challenge/Challenge-mp4.ipynb)
-  - Video Output File: [Link](./Writeup_IV/Challenge_fo.mp4)
+  - Video Output File: [Link](https://www.youtube.com/watch?v=ql4EMbBfreA&feature=youtu.be)
