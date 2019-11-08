@@ -119,7 +119,7 @@ vid_out.release()
    - Video Output File: [Link](./Writeup_IV/solidWhiteRight_fo.mp4)
 
   - Solid Yellow Left
-    - Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/Porject1Video-SolidWhiteRight/solidYellowLeft-mp4.ipynb)
+    - Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/Porject1Video-SolidYellowLeft/solidYellowLeft-mp4.ipynb)
     - Video Output File: [Link](./Writeup_IV/solidYellowLeft_fo.mp4) 
       
 ---
