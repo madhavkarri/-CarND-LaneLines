@@ -140,8 +140,8 @@ vid_out.release()
   - To reject spurious or unwanted slopes during slope segregation
 - Using mapping and localization explore possibility to detect and utilize priori information on lane coordinates and curvature 
 
-### Optional Challange
+### Optional Challenge
 - Tried modifying different parameters and found out converting the original raw image/frame using color space conversion code to hsv within cv2.cvtcolor resulted in optimal detection of the yellow and white lanes through all the frames in the video
-- Solid Yellow Left
+- Challenge
   - Python Code/Implementation: [Link](/MadhavKarri-Project1-Files/Project1Video-Challenge/Challenge-mp4.ipynb)
   - Video Output File: [Link](./Writeup_IV/Challenge_fo.mp4)
