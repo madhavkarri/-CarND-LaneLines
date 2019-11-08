@@ -13,15 +13,16 @@ The goals/steps for this project: build a pipeline that finds lane lines on the 
 
 Steps/process when working on Static Images/Frames
 * Load all necessary python imports
-* Implement Gaussian Blur and Canny Edge Detection. For a single static image/frame fine tune parameters such as kernel size, low threshold and high threshold
+* Implement Gaussian Blur and Canny Edge Detection. Fine tune parameters such as kernel size, low threshold and high threshold
 * Followed by Masking and P-Hough Transform to extract lines and line-coordinates
-* Calculate slopes for all line-coordinates from the previous step. Use the change in sign of slope values to segregate lines and line-coordinates for each of the left and right lanes.
+* Calculate weighted-average slopes for all line-coordinates from the previous step. Use the change in sign of slope values to segregate lines and line-coordinates for each of the left and right lanes.
 * To draw lines 
   - Slope (parameter m) and intercept (parameter b) in "y=mx+b" for each of the left and right lane lines were determined
-  - The maximum y-coordinate for all images (bottom) was determined to be 540 (from image size). Using this y-coordinate, x-coordinate for each of the left and right lanes were determined using "m" and "b" parameters
-  - Determine minimum y coordinates at top edge of the masking region: minimum y-coordinate from all the detected line-coordinates from P-Hough Transform for each of the left and right lanes were extracted. Corresponding x-coordinates were determined using "m" and "b" parameters
+  - The maximum y-coordinate for all images (bottom) was determined to be 540 (from image size)
+  - The minimum y-coordinate for all images was  fixed approximately at 0.6*(540)
+  - Using these y-coordinates, corresponding x-coordinates for each of the left and right lanes were determined using "m" and "b" parameters
 
-The above set of steps were repeated on the following set of images
+The above set of steps were repeated on the following set of test images
 ![WI_Test_Images](./Writeup_IV/Test_Images.png)
 
 
