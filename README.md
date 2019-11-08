@@ -72,17 +72,45 @@ while success:
     - Function1: "my_ced" that implements Canny Edge Detection 
       - Input: ".jpg" image file
       - Output: edges from the Canny Edge Detection algorithm
-    - Function2: "my_mpht" that implements Masking and P-Hough Transform to get line and line-coordinates.
+    - Function2: "my_mpht" that implements Masking and P-Hough Transform to get line and line-coordinates
       - Input: ".jpg" image file, masking coordinates, and edges output from ("my_ced") Canny Edge Detection algorithm
-      - Output: co-ordinates for all the lines detected by P-Hough Transform and consequently "m-slope" and "b-intercept" parameters
+      - Output: co-ordinates for all lines detected by P-Hough Transform and "m-slope" and "b-intercept" parameters
     - Function3: "my_fld" that implements drawing final lines and adding transperency
       - Input: ".jpg" image file and co-ordinates of all the lines detected by P-Hough Transform
       - Output: Original raw image/frame overlayed with detected/predicted lane lines
-      - Extras: In addition this function also adds trasparency and saves the final output as a ".jpg file"
+      - Extras: This function also adds trasparency and saves the final output as a ".jpg file"
     - Main Function/Wrapper: A while loop that calls Functions 1, 2, 3 repeatedly on each of the image frames extracted from the original video.
 
   - Implemented a python code to stich final output frames from the preceeding steps and convert it into a video
-![WI_SolidWhiteRightV2](./Writeup_IV/WI_SolidWhiteRightV2.png)
+```python
+# MAKING VIDEO FROM FINAL OUTPUT FRAMES
+
+fo_swr_frame0 = cv2.imread('fo_swr_frame0.jpg')
+
+vid_height, vid_width, vid_layers =  fo_swr_frame0.shape
+
+# fourcc = cv2.VideoWriter_fourcc(*'X264')
+fourcc = cv2.VideoWriter_fourcc(*'MP4V')
+vid_out = cv2.VideoWriter('solidWhiteRight_fo.mp4',fourcc,25,(vid_width,vid_height),True)
+
+ic2 = 0
+# max:220
+
+while ((ic2<221)):
+    
+    skip_fs = []
+    if (ic2 in set(skip_fs)):
+        print('skipping frame:'+str(ic2)+'.jpg')
+    else:
+        cur_img = cv2.imread('fo_swr_frame'+str(ic2)+'.jpg')
+        vid_out.write(cur_img)
+        
+    ic2 = ic2+1
+    print(ic2)
+        
+# cv2.destroyAllWindows()
+vid_out.release()        
+```
 
 **Final Video Output**
 
