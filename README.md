@@ -143,5 +143,5 @@ vid_out.release()
 ### Optional Challange
 - Tried modifying different parameters and found out converting the original raw image/frame using color space conversion code to hsv within cv2.cvtcolor resulted in optimal detection of the yellow and white lanes through all the frames in the video
 - Solid Yellow Left
-  - Python Code/Implementation: [Link](./MadhavKarri-Project1-Files/Porject1Video-Challenge/Challenge-mp4.ipynb)
+  - Python Code/Implementation: [Link](/MadhavKarri-Project1-Files/Project1Video-Challenge/Challenge-mp4.ipynb)
   - Video Output File: [Link](./Writeup_IV/Challenge_fo.mp4)
