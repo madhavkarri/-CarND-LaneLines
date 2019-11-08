@@ -131,7 +131,7 @@ vid_out.release()
   - Manual picking of masking co-ordinates
   - Fine tuning parameters for each of the Gaussian Blur/Canny Edge Detection/Masking/P-Hough Transform steps
   - Only detects straight lane lines. To handle curved lanes (or lane curvature), need to implement perspective transformation and poly fitting rather than linear fitting
-  - Spurious or unwanted slopes, when segregating slopes to detect line segments associated with each of the left and right lanes
+  - Spurious or unwanted slopes resulting from P-Hough Transform
 
 ### Possible improvements to pipeline
 - Research/Implement detection of arc/curvature line segments available in opencv
